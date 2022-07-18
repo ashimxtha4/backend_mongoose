@@ -14,9 +14,6 @@ const userSchema = new mongoose.Schema({
         required:  [true,'please enter you valid email'],
         unique : true
     },
-    employee_id: {
-        type:String, 
-    },
     role_id :{
         type:mongoose.Schema.Types.ObjectId,
         ref:'Role'
@@ -44,7 +41,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true,
     },
-        password : String
+    password : String
 })
 
 module.exports = mongoose.model('user', userSchema);
