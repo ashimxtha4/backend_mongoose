@@ -2,9 +2,12 @@ const mongoose = require('mongoose');
 
 const roleSchema = new mongoose.Schema(
     {
-        role : String
+        role :{
+            type: String,
+            enum : ['Employee','PM']
+        }
     }
 );
 
-const Role=mongoose.model('Role',roleSchema);
+module.exports =mongoose.model('Role',roleSchema);
 

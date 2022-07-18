@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required:  [true,'please enter you valid email'],
+        unique : true
     },
     employee_id: {
         type:String, 
